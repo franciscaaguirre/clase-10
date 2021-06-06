@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Website</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <header class="principal">
+                <h1>KIKA-AGR</h1>
+                <p>Holaaaaa</p>
+                <p>Xauuuu</p>
+            </header>
+            <div class="entrada entrada1">
+                <p>ENTRADA</p>
+                <p class="price">$500</p>
+                <p>VIP+FOTO CON KIKA</p>
+            </div>
+            <div class="entrada entrada2">
+                <p>ENTRADA</p>
+                <p class="price">$200</p>
+                <p>AL FONDO Y CERVEZA CON KIKA</p>
+            </div>
+        </div>
+        <nav class="menu">
+            <button aria-expanded="false" aria-controls="menu-list">
+                <span class="open">&#9776;</span>
+                <span class="close">&#9747;</span>
+                Menú
+            </button>
+            <ul id="menu-list">
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Speaker</a>
+                </li>
+                <li>
+                    <a href="">Precios</a>
+                </li>
+                <li>
+                    <a href="">Code</a>
+                </li>
+                <li>
+                    <a href="">VIP</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="features">
+            <div class="feature">
+                <span class="icon">🍔</span>
+                <h3>Comida</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, vel!</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🍺</span>
+                <h3>Cerveza</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, vel!</p>
+            </div>
+            <div class="feature">
+                <span class="icon">💻</span>
+                <h3>Code</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, vel!</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🎛️</span>
+                <h3>Música</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, vel!</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <video src="./assets/ScreenRecording-08-09-2019 09-39-26.MP4" loop autoplay></video>
+            <div class="about__details">
+                <h2>A codear!</h2>
+                <p>Slime Profile, easy to hold and leaded with cheese.</p>
+                <p>This is one you have been waiting for</p>
+                <button>Infoooo &#10142;</button>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Instant Grams</h2>
+            <img src="https://source.unsplash.com/random/201x201" alt="">
+            <img src="https://source.unsplash.com/random/202x202" alt="">
+            <img src="https://source.unsplash.com/random/203x203" alt="">
+            <img src="https://source.unsplash.com/random/204x204" alt="">
+            <img src="https://source.unsplash.com/random/205x205" alt="">
+            <img src="https://source.unsplash.com/random/206x206" alt="">
+            <img src="https://source.unsplash.com/random/207x207" alt="">
+            <img src="https://source.unsplash.com/random/208x208" alt="">
+            <img src="https://source.unsplash.com/random/209x209" alt="">
+            <img src="https://source.unsplash.com/random/210x210" alt="">
+        </section>
+    </div>
+    
+    <script>
+        const navButton = document.querySelector ('button[aria-expanded]')
+        ;
+        // console.log(navButton);
+        function toggleNav({ target }) {
+            const expandir = 
+                target.getAttribute('aria-expanded') === 'true' || false;
+            // console.log(typeof expandir)
+            navButton.setAttribute('aria-expanded', !expandir);
+        }
+        navButton.addEventListener('click', toggleNav);
+    </script>
+</body>
+</html>
